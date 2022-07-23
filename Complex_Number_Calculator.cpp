@@ -491,8 +491,7 @@ com com::sqrt_value(void)
 }
 int main()
 {
-    cout << "**********************Operations On Complex "
-            "Number***************************";
+    cout << "**********************Operations On Complex Number***************************"<<endl;
 
     // Declare o1,o2 and o3 variable of class name data type
     com o1, o2, o3;
@@ -514,10 +513,8 @@ int main()
         cout << "9.Cosine of Complex Number\n\n";
         cout << "10.Tangent of Complex Number\n\n";
         cout << "11.Sine Hyperbolic of Complex Number\n\n";
-        cout
-            << "12.Cosine Hyperbolic of Complex Number\n\n";
-        cout << "13.Tangent Hyperbolic of Complex "
-                "Number\n\n";
+        cout << "12.Cosine Hyperbolic of Complex Number\n\n";
+        cout << "13.Tangent Hyperbolic of Complex Number\n\n";
         cout << "14.Natural Log of Complex Number\n\n";
         cout << "15.Norm of Complex Number\n\n";
         cout << "16.Absolute of Complex Number\n\n";
@@ -526,8 +523,7 @@ int main()
         cout << "19.Exponential of Complex Number\n\n";
         cout << "20.Square Root of Complex Number\n\n";
         cout << "21.Show Real Values of Complex Number\n\n";
-        cout << "22.Show Imaginary Values of Complex "
-                "Number\n\n";
+        cout << "22.Show Imaginary Values of Complex Number\n\n";
         cout << "23.Exit\n\n";
         cin >> choice;
         cout << "\n";
@@ -671,12 +667,10 @@ int main()
         case 16:
             // call abs_value() function to Find absolute of
             // complex number
-            cout
-                << "Absolute of 1st Complex Number is: \n";
+            cout << "Absolute of 1st Complex Number is: \n";
             o3 = o1.abs_value();
             o3.display();
-            cout
-                << "Absolute of 2nd Complex Number is: \n";
+            cout << "Absolute of 2nd Complex Number is: \n";
             o3 = o2.abs_value();
             o3.display();
             break;
@@ -703,24 +697,20 @@ int main()
         case 19:
             // call exp_value() function to Find exponential
             // of complex number
-            cout << "Exponential of 1st Complex Number is "
-                    ": \n";
+            cout << "Exponential of 1st Complex Number is : \n";
             o3 = o1.exp_value();
             o3.display();
-            cout << "Exponential of 2nd Complex Number is "
-                    ": \n";
+            cout << "Exponential of 2nd Complex Number is : \n";
             o3 = o2.exp_value();
             o3.display();
             break;
         case 20:
             // call sqrt_value() function to Find Square root
             // of complex number
-            cout << "Square root of 1st Complex Number is "
-                    ": \n";
+            cout << "Square root of 1st Complex Number is : \n";
             o3 = o1.sqrt_value();
             o3.display();
-            cout << "Square root of 2nd Complex Number is "
-                    ": \n";
+            cout << "Square root of 2nd Complex Number is : \n";
             o3 = o2.sqrt_value();
             o3.display();
             break;
@@ -735,11 +725,9 @@ int main()
         case 22:
             // call get_img() function to get imaginary part
             // of complex number
-            cout << "Imaginary Value of 1st Complex Number "
-                    "is: "
+            cout << "Imaginary Value of 1st Complex Number is: "
                  << o1.get_img() << endl;
-            cout << "Imaginary Value of 2nd Complex Number "
-                    "is: "
+            cout << "Imaginary Value of 2nd Complex Number is: "
                  << o2.get_img() << endl;
             break;
         case 23:
