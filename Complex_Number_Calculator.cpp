@@ -1,7 +1,8 @@
-// Complex Number Calculator using C++
+/* Complex Number Calculator using C++ */
+#include <iostream>
 #include <cmath>
 #include <complex>
-#include <iostream>
+
 using namespace std;
 class com
 {
