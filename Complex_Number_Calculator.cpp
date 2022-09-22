@@ -10,83 +10,83 @@ class com
     double reall, img;
 
 public:
-    // Method to read Complex Number
+    // 1.Method to read Complex Number
     void read()
     {
-        // Reads Real Value of Complex Number
+        // 1(a).Reads Real Value of Complex Number
         cout << "Real Part value: ";
         cin >> reall;
 
-        // Reads Imaginary Value of Complex Number
+        // 1(b).Reads Imaginary Value of Complex Number
         cout << "Img Part value: ";
         cin >> img;
     }
-    // display function declaration
+    // 2.display function declaration
     void display();
 
-    //+ operator function declaration
+    // 3.(+) operator function declaration
     com operator+(com);
 
-    //- operator function declaration
+    // 4.(-) operator function declaration
     com operator-(com);
 
-    //* operator function declaration
+    // 5.(*) operator function declaration
     com operator*(com);
 
-    // / operator function declaration
+    // 6.(/) operator function declaration
     com operator/(com);
 
-    //~ operator function declaration
+    // 7.(~) operator function declaration
     com operator~(void);
 
-    // sin_value function declaration
+    // 8.sin_value function declaration
     com sin_value();
 
-    // cos_value function declaration
+    // 9.cos_value function declaration
     com cos_value();
 
-    // tan_value function declaration
+    // 10.tan_value function declaration
     com tan_value();
 
-    // sinh_value function declaration
+    // 11.sinh_value function declaration
     com sinh_value();
 
-    // cosh_value function declaration
+    // 12.cosh_value function declaration
     com cosh_value();
 
-    // tanh_value function declaration
+    // 13.tanh_value function declaration
     com tanh_value();
 
-    // log_value function declaration
+    // 14.log_value function declaration
     com log_value();
 
-    // norm_value function declaration
+    // 15.norm_value function declaration
     com norm_value();
 
-    // abs_value function declaration
+    // 16.abs_value function declaration
     com abs_value();
 
-    // arg_value function declaration
+    // 17.arg_value function declaration
     com arg_value();
 
-    // power_value function declaration
+    // 18.power_value function declaration
     com power_value();
 
-    // exp_value function declaration
+    // 19.exp_value function declaration
     com exp_value();
 
-    // sqrt_value function declaration
+    // 20.sqrt_value function declaration
     com sqrt_value();
 
-    // Declare inside com class and show Real part of
-    // complex number
+    // Declare inside com class and show Real part of complex number
+    
     double get_real()
     {
         // return real part
         return ((*this).reall);
     }
-    // Declare inside com class and
-    // show Imaginary part of complex number
+    // Declare inside com class and show Imaginary part of complex number
+    
     double get_img()
     {
         // return img part
@@ -96,15 +96,15 @@ public:
 // Display Entered Complex Number
 void com::display()
 {
-    // if imaginary part is positive then
-    // it display real + i img complex number
+    // if imaginary part is positive then it display real + i img complex number
+    
     if (img >= 0)
     {
         cout << reall << "+i" << img << endl;
     }
 
-    // if imaginary part is negative then
-    // it display real - i img complex number
+    // if imaginary part is negative then it display real - i img complex number
+    
     else
     {
         cout << reall << "-i" << (-1) * img << endl;
@@ -116,12 +116,12 @@ com com::operator+(com o2)
     // declare temporary variable of class data type
     com temp;
 
-    // add real part of two complex number
-    // and store in real part of temporary variable
+    // add real part of two complex number and store in real part of temporary variable
+    
     temp.reall = reall + o2.reall;
 
-    // add imaginary part of two complex number
-    // and store in imaginary part of temporary variable
+    // add imaginary part of two complex number and store in imaginary part of temporary variable
+    
     temp.img = img + o2.img;
 
     // return temporary variable to function
@@ -133,12 +133,11 @@ com com::operator-(com o2)
     // declare temporary variable of class data type
     com temp;
 
-    // subtract real part of two complex number
-    // and store in real part of temporary variable
+    // subtract real part of two complex number and store in real part of temporary variable
     temp.reall = reall - o2.reall;
 
-    // subtract imaginary part of two complex number and
-    // store in imaginary part of temporary variable
+    // subtract imaginary part of two complex number and store in imaginary part of temporary variable
+    
     temp.img = img - o2.img;
 
     // return temporary variable to function
@@ -149,16 +148,13 @@ com com::operator*(com o2)
 {
     // declare temporary variable of class data type
     com temp;
-
-    // Add Multiplication of real part of two complex
-    // number & imaginary part of two complex number and
-    // store in real part of temporary variable
+    // Add Multiplication of real part of two complex number & imaginary part of two complex number and store in real part of temporary variable
+    
     temp.reall = (reall * o2.reall) + (-1 * (img * o2.img));
 
-    // Add multiplication of real part of 1st and img part
-    // of 2nd complex number and multiplication of img part
-    // of 1st and real part of 2nd complex number and store
-    // in real part of temporary variable
+    // Add multiplication of real part of 1st and img part of 2nd complex number and multiplication of img part
+    // of 1st and real part of 2nd complex number and store in real part of temporary variable
+    
     temp.img = (img * o2.reall) + (reall * o2.img);
 
     // return temporary variable to function
@@ -167,24 +163,24 @@ com com::operator*(com o2)
 // Divide two user entered complex number
 com com::operator/(com o2)
 {
-    // declare temporary,o,num,den
-    // variable of class data type
+    // variable of class data type declare temporary,o,num,den 
+    
     com o, num, den, temp;
 
-    // call conjugate function and perfor conjugate
-    // operation
+    // call conjugate function and perfor conjugate operation
+    
     o = ~o2;
 
     // calculate numerator and denominator complex number
     num = (*this) * (o);
     den = o2 * o;
 
-    // divide numerator real part with denominator real part
-    // and store in real part of temporary variable
+    // divide numerator real part with denominator real part and store in real part of temporary variable
+    
     temp.reall = num.reall / den.reall;
 
-    // divide numerator img part with denominator img part
-    // and store in img part of temporary variable
+    // divide numerator img part with denominator img part and store in img part of temporary variable
+    
     temp.img = num.img / den.reall;
 
     // return temporary variable to function
@@ -199,8 +195,8 @@ com com::operator~(void)
     // Store real part in real part of temporary variable
     temp.reall = reall;
 
-    // Store multiplication of -1 and img in img part of
-    // temporary variable to make conjugate
+    // Store multiplication of -1 and img in img part of temporary variable to make conjugate
+    
     temp.img = -1 * img;
 
     // return temporary variable to function
@@ -219,8 +215,8 @@ com com::sin_value(void)
     // sin() function find sin value of complex number
     sam = sin(cn);
 
-    // real and img part of sam variable store in real and
-    // img part of temporary variable
+    // real and img part of sam variable store in real and img part of temporary variable
+    
     temp.reall = real(sam);
     temp.img = imag(sam);
 
@@ -240,8 +236,8 @@ com com::cos_value(void)
     // cos() function find cosin value of complex number
     sam = cos(cn);
 
-    // real and img part of sam variable store in real and
-    // img part of temporary variable
+    // real and img part of sam variable store in real and img part of temporary variable
+ 
     temp.reall = real(sam);
     temp.img = imag(sam);
 
@@ -261,8 +257,8 @@ com com::tan_value(void)
     // tan() function find tangent value of complex number
     sam = tan(cn);
 
-    // real and img part of sam variable store in real and
-    // img part of temporary variable
+    // real and img part of sam variable store in real and img part of temporary variable
+ 
     temp.reall = real(sam);
     temp.img = imag(sam);
 
@@ -279,12 +275,12 @@ com com::sinh_value(void)
     complex<double> cn((*this).reall, (*this).img);
     complex<double> sam;
 
-    // sinh() function find sine hyperbolic value of complex
-    // number
+    // sinh() function find sine hyperbolic value of complex number
+  
     sam = sinh(cn);
 
-    // real and img part of sam variable store in real and
-    // img part of temporary variable
+    // real and img part of sam variable store in real and img part of temporary variable
+  
     temp.reall = real(sam);
     temp.img = imag(sam);
 
@@ -301,12 +297,12 @@ com com::cosh_value(void)
     complex<double> cn((*this).reall, (*this).img);
     complex<double> sam;
 
-    // cosh() function find cosine hyperbolic value of
-    // complex number
+    // cosh() function find cosine hyperbolic value of complex number
+  
     sam = cosh(cn);
 
-    // real and img part of sam variable store in real and
-    // img part of temporary variable
+    // real and img part of sam variable store in real and img part of temporary variable
+ 
     temp.reall = real(sam);
     temp.img = imag(sam);
 
@@ -323,8 +319,8 @@ com com::tanh_value(void)
     complex<double> cn((*this).reall, (*this).img);
     complex<double> sam;
 
-    // tanh() function find tangent hyperbolic value of
-    // complex number
+    // tanh() function find tangent hyperbolic value of complex number
+   
     sam = tanh(cn);
 
     // real and img part of sam variable store in real and
